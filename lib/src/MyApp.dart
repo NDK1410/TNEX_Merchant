@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tnexmerchant/src/screens/IntroScreen.dart';
+import 'package:tnexmerchant/src/screens/LoadingScreen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: IntroScreen(),
+      home: LoadingScreen(),
     );
   }
 }
