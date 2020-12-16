@@ -57,6 +57,7 @@ flutter:
     - assets/products-1-wide.png
     - assets/products-1.png
     - assets/merchant-3-campaign.png
+    - assets/merchant-3-rich.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
