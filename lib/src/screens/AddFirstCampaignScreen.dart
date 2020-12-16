@@ -31,7 +31,7 @@ class AddFirstCampaignScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               child: Image.asset(
-                'assets/merchant-3-campaign.png',
+                'assets/3-campaign/merchant-3-campaign.png',
                 fit: BoxFit.fill,
               ),
             ),
