@@ -10,17 +10,9 @@ class LoadingScreen extends StatefulWidget {
 class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
-    // return Container(
-    //   color: MyColors.loadingScreenBackground,
-    //   child: Center(
-    //     child: Image.asset(
-    //       "assets/Loading.png",
-    //       fit: BoxFit.cover,
-    //       width: 350,
-    //     ),
-    //   ),
-    // );
-    return Scaffold(body: buildBody(context));
+    return Scaffold(
+      body: buildBody(context),
+    );
   }
 
   Widget buildBody(BuildContext context) {
