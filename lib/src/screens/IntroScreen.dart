@@ -24,105 +24,6 @@ class _IntroScreenState extends State<IntroScreen> {
   }
 
   @override
-  // Widget build(BuildContext context) {
-  //   return Scaffold(
-  //     body: Container(
-  //       child: Column(
-  //         mainAxisAlignment: MainAxisAlignment.end,
-  //         crossAxisAlignment: CrossAxisAlignment.start,
-  //         children: <Widget>[
-  //           Padding(
-  //             padding: EdgeInsets.only(left: 60),
-  //             child: Text(
-  //               "Welcome to",
-  //               style: TextStyle(
-  //                   color: Color.fromRGBO(34, 32, 147, 1),
-  //                   fontSize: 30,
-  //                   fontWeight: FontWeight.bold),
-  //             ),
-  //           ),
-  //           Padding(
-  //             padding: EdgeInsets.only(left: 60),
-  //             child: Text(
-  //               "TNEX Merchant",
-  //               style: TextStyle(
-  //                   color: Color.fromRGBO(34, 32, 147, 1),
-  //                   fontSize: 30,
-  //                   fontWeight: FontWeight.bold),
-  //             ),
-  //           ),
-  //           Container(
-  //             width: double.infinity,
-  //             height: 300,
-  //             child: Image.asset(
-  //               'assets/introslide_1.png',
-  //               fit: BoxFit.fill,
-  //             ),
-  //           ),
-  //           Row(
-  //             children: <Widget>[
-  //               Text(
-  //                 "Let's",
-  //                 style: TextStyle(
-  //                   fontSize: 20,
-  //                   color: Colors.grey[600],
-  //                 ),
-  //               ),
-  //               Text(
-  //                 "double your revenue in 3-6 months",
-  //                 style: TextStyle(
-  //                     fontSize: 20,
-  //                     color: Colors.grey[800],
-  //                     fontWeight: FontWeight.bold),
-  //               ),
-  //             ],
-  //           ),
-  //           Padding(
-  //             padding: EdgeInsets.only(top: 10),
-  //             child: Text(
-  //               "Just a few steps and it’s done",
-  //               style: TextStyle(fontSize: 20, color: Colors.grey[600]),
-  //             ),
-  //           ),
-  //           Padding(
-  //             padding: EdgeInsets.only(left: 40, top: 25),
-  //             child: SizedBox(
-  //               height: 50,
-  //               width: 340,
-  //               child: RaisedButton(
-  //                 color: Color.fromRGBO(34, 32, 147, 1),
-  //                 shape: RoundedRectangleBorder(
-  //                   borderRadius: BorderRadius.all(
-  //                     Radius.circular(4),
-  //                   ),
-  //                 ),
-  //                 onPressed: () {},
-  //                 child: Text(
-  //                   "I want to create an account",
-  //                   style: TextStyle(
-  //                     color: Colors.white,
-  //                     fontSize: 20,
-  //                   ),
-  //                 ),
-  //               ),
-  //             ),
-  //           ),
-  //           Padding(
-  //             padding: EdgeInsets.only(top: 20, left: 40, bottom: 30),
-  //             child: Text(
-  //               "I already have an account",
-  //               style: TextStyle(
-  //                 color: Color.fromRGBO(34, 32, 147, 1),
-  //                 fontSize: 20,
-  //               ),
-  //             ),
-  //           ),
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
-
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -167,7 +68,7 @@ class _IntroScreenState extends State<IntroScreen> {
               height: 50,
               width: 340,
               child: RaisedButton(
-                color: Color.fromRGBO(34, 32, 147, 1),
+                color: MyColors.secondary,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(4),
@@ -189,7 +90,7 @@ class _IntroScreenState extends State<IntroScreen> {
             child: Text(
               "I already have an account",
               style: TextStyle(
-                color: Color.fromRGBO(34, 32, 147, 1),
+                color: MyColors.secondary,
                 fontSize: 20,
               ),
             ),
