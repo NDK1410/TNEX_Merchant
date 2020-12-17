@@ -23,7 +23,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
           color: MyColors.loadingScreenBackground,
           child: Center(
             child: Image.asset(
-              "assets/Loading.png",
+              "assets/1-register/Loading.png",
               fit: BoxFit.cover,
               width: 350,
             ),

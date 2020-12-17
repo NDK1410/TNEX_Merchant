@@ -38,18 +38,18 @@ class _IntroScreenState extends State<IntroScreen> {
             controller: _pageController,
             children: <Widget>[
               makePage(
-                image: 'assets/introslide_1.png',
+                image: 'assets/1-register/introslide_1.png',
                 title: MyString.step1,
                 content: MyString.step4,
               ),
               makePage(
                 // reverse: true,
-                image: 'assets/step-one.png',
+                image: 'assets/1-register/step-one.png',
                 title: MyString.step2,
                 content: MyString.step4,
               ),
               makePage(
-                image: 'assets/step-two.png',
+                image: 'assets/1-register/step-two.png',
                 title: MyString.step3,
                 content: MyString.step4,
               ),

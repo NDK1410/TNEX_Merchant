@@ -26,7 +26,7 @@ class RichDecisionScreen extends StatelessWidget {
               height: 300,
               width: 300,
               child: Image.asset(
-                'assets/merchant-3-rich.png',
+                'assets/3-campaign/merchant-3-rich.png',
               ),
             ),
             Padding(

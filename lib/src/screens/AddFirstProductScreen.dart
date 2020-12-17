@@ -32,7 +32,7 @@ class AddFirstProductScreen extends StatelessWidget {
               width: double.infinity,
               height: 350,
               child: Image.asset(
-                'assets/products-1.png',
+                'assets/2-products/products-1.png',
                 fit: BoxFit.fill,
               ),
             ),
