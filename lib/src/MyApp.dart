@@ -5,6 +5,7 @@ import 'package:tnexmerchant/src/screens/IntroScreen.dart';
 import 'package:tnexmerchant/src/helpers/SlideRightRouter.dart';
 import 'package:tnexmerchant/src/screens/TakeIdCardPictureIntroScreen.dart';
 import 'package:tnexmerchant/src/screens/LoginScreen.dart';
+import 'package:tnexmerchant/src/screens/CampaignSelectTemplate.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -25,9 +26,12 @@ class MyApp extends StatelessWidget {
           case '/takeidcard':
             return SlideRightRoute(widget: TakeIdCardPictureIntroScreen());
             break;
+          case '/campaignSelectTemplate':
+            return SlideRightRoute(widget: CampaignSelectTemplate());
+            break;
         }
       },
-      home: LoginScreen(),
+      home: LoadingScreen(),
     );
   }
 }
