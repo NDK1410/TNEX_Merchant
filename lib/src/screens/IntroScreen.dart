@@ -74,7 +74,9 @@ class _IntroScreenState extends State<IntroScreen> {
                     Radius.circular(4),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/register');
+                },
                 child: Text(
                   "I want to create an account",
                   style: TextStyle(
