@@ -12,7 +12,7 @@ class CampaignSelectTemplate extends StatelessWidget {
             style: TextStyle(fontSize: 18),
           ),
         ),
-        backgroundColor: MyColors.secondary,
+        backgroundColor: MyColors.brand_dark,
       ),
       body: Container(
         width: double.infinity,
@@ -24,7 +24,7 @@ class CampaignSelectTemplate extends StatelessWidget {
                 "Use campaign template",
                 style: TextStyle(
                   fontSize: 27,
-                  color: MyColors.secondary,
+                  color: MyColors.brand_dark,
                   fontWeight: FontWeight.bold,
                 ),
               ),

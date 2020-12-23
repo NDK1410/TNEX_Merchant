@@ -13,7 +13,7 @@ class AddFirstProductScreen extends StatelessWidget {
               child: Text(
                 "Add your first product",
                 style: TextStyle(
-                    color: MyColors.secondary,
+                    color: MyColors.brand_dark,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
@@ -23,7 +23,7 @@ class AddFirstProductScreen extends StatelessWidget {
               child: Text(
                 "And start make some profit now!",
                 style: TextStyle(
-                  color: MyColors.secondary,
+                  color: MyColors.brand_dark,
                   fontSize: 15,
                 ),
               ),
@@ -42,7 +42,7 @@ class AddFirstProductScreen extends StatelessWidget {
                 height: 50,
                 width: 340,
                 child: RaisedButton(
-                  color: MyColors.secondary,
+                  color: MyColors.brand_dark,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(4),

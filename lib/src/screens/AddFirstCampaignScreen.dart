@@ -13,7 +13,7 @@ class AddFirstCampaignScreen extends StatelessWidget {
               child: Text(
                 "Add your first campaign",
                 style: TextStyle(
-                    color: MyColors.secondary,
+                    color: MyColors.brand_dark,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
@@ -23,7 +23,7 @@ class AddFirstCampaignScreen extends StatelessWidget {
               child: Text(
                 "Make your products more attractive",
                 style: TextStyle(
-                  color: MyColors.secondary,
+                  color: MyColors.brand_dark,
                   fontSize: 15,
                 ),
               ),
@@ -41,7 +41,7 @@ class AddFirstCampaignScreen extends StatelessWidget {
                 height: 50,
                 width: 340,
                 child: RaisedButton(
-                  color: MyColors.secondary,
+                  color: MyColors.brand_dark,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(4),
