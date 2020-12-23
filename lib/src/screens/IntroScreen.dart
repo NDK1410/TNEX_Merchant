@@ -68,7 +68,7 @@ class _IntroScreenState extends State<IntroScreen> {
               height: 50,
               width: 340,
               child: RaisedButton(
-                color: MyColors.secondary,
+                color: MyColors.brand_dark,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(4),
@@ -92,7 +92,7 @@ class _IntroScreenState extends State<IntroScreen> {
             child: Text(
               "I already have an account",
               style: TextStyle(
-                color: MyColors.secondary,
+                color: MyColors.brand_dark,
                 fontSize: 20,
               ),
             ),
@@ -114,7 +114,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     Text(
                       "Welcome to",
                       style: TextStyle(
-                        color: MyColors.secondary,
+                        color: MyColors.brand_dark,
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),
@@ -122,7 +122,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     Text(
                       "TNEX Merchant",
                       style: TextStyle(
-                        color: MyColors.secondary,
+                        color: MyColors.brand_dark,
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),

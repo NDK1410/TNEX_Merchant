@@ -10,12 +10,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: MyColors.secondary,
+      // backgroundColor: MyColors.brand_dark,
       body: Container(
         child: Stack(
           children: <Widget>[
             Container(
-              color: MyColors.secondary,
+              color: MyColors.brand_dark,
             ),
             Center(
               child: Container(
