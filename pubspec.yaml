@@ -32,7 +32,8 @@ dependencies:
   get: ^3.22.2
   spider: ^1.1.1
   flutter_bloc: ^6.1.1
-  string_validator: ^0.1.4 
+  string_validator: ^0.1.4
+  fdottedline: ^1.0.1
 
 dev_dependencies:
   flutter_test:

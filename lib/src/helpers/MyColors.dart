@@ -6,5 +6,7 @@ class MyColors {
   static Color brand = Color.fromRGBO(34, 32, 147, 1);
   static Color success = Color.fromRGBO(42, 166, 106, 1);
   static Color textPrimary = Color.fromRGBO(80, 94, 101, 1);
+  static Color blueGreyStroke = Color.fromRGBO(23, 21, 137, 0.5);
+  static Color blueGreyFill = Color.fromRGBO(23, 21, 137, 0.2);
   static Color loadingScreenBackground = Color.fromRGBO(61, 72, 180, 1);
 }
