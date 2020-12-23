@@ -99,7 +99,9 @@ class CreateFreeBankAccountScreen extends StatelessWidget {
                       Radius.circular(4),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/takeidcard');
+                  },
                   child: Text(
                     "Create my bank account",
                     style: TextStyle(
