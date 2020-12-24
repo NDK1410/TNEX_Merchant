@@ -4,6 +4,7 @@ import 'package:tnexmerchant/src/screens/RegisterScreen.dart';
 import 'package:tnexmerchant/src/screens/IntroScreen.dart';
 import 'package:tnexmerchant/src/helpers/SlideRightRouter.dart';
 import 'package:tnexmerchant/src/screens/TakeIdCardPictureIntroScreen.dart';
+import 'package:tnexmerchant/src/screens/LoginScreen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -18,12 +19,15 @@ class MyApp extends StatelessWidget {
           case '/register':
             return SlideRightRoute(widget: RegisterScreen());
             break;
+          case '/login':
+            return SlideRightRoute(widget: LoginScreen());
+            break;
           case '/takeidcard':
             return SlideRightRoute(widget: TakeIdCardPictureIntroScreen());
             break;
         }
       },
-      home: LoadingScreen(),
+      home: LoginScreen(),
     );
   }
 }
