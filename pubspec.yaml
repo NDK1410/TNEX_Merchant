@@ -57,6 +57,8 @@ flutter:
     - assets/1-register/introslide_1.png
     - assets/1-register/step-three.png
     - assets/1-register/Loading.png
+    - assets/1-register/splash_bg_decor.png
+    - assets/1-register/bg_transfer_full.png
     - assets/1-register/OpenBankAccountFailed.png
     - assets/1-register/CreateFreeBankAccount.png
     - assets/2-products/products-1-wide.png
