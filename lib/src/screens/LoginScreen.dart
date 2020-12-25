@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  // LoginBloc bloc = new LoginBloc();
+  bool _showPass = false;
+  TextEditingController _passController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,23 +116,43 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                          child: TextField(
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: MyColors.textPrimary,
-                            ),
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.blue),
+                          child: Stack(
+                            alignment: AlignmentDirectional.centerEnd,
+                            children: <Widget>[
+                              TextField(
+                                controller: _passController,
+                                obscureText: !_showPass,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: MyColors.textPrimary,
+                                ),
+                                decoration: InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(6.0)),
+                                    borderSide: BorderSide(color: Colors.blue),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(6.0)),
+                                    borderSide: BorderSide(color: Colors.grey),
+                                  ),
+                                ),
                               ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.grey),
+                              GestureDetector(
+                                onTap: onToggleShowPass,
+                                child: Padding(
+                                  padding: EdgeInsets.only(right: 10),
+                                  child: Icon(
+                                    Icons.remove_red_eye,
+                                    color: _showPass
+                                        ? MyColors.brand_dark
+                                        : Colors.grey[400],
+                                    size: 24.0,
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         ),
                         Padding(
@@ -138,9 +167,7 @@ class LoginScreen extends StatelessWidget {
                                   Radius.circular(4),
                                 ),
                               ),
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/takeidcard');
-                              },
+                              onPressed: () {},
                               child: Text(
                                 "Login",
                                 style: TextStyle(
@@ -180,5 +207,11 @@ class LoginScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void onToggleShowPass() {
+    setState(() {
+      _showPass = !_showPass;
+    });
   }
 }
