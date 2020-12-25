@@ -47,7 +47,9 @@ class AddFirstCampaignScreen extends StatelessWidget {
                       Radius.circular(4),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/campaignSelectTemplate');
+                  },
                   child: Text(
                     "Add new campaign",
                     style: TextStyle(
