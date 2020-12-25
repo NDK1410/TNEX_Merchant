@@ -89,11 +89,16 @@ class _IntroScreenState extends State<IntroScreen> {
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 30),
-            child: Text(
-              "I already have an account",
-              style: TextStyle(
-                color: MyColors.brand_dark,
-                fontSize: 20,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, "/login");
+              },
+              child: Text(
+                "I already have an account",
+                style: TextStyle(
+                  color: MyColors.brand_dark,
+                  fontSize: 20,
+                ),
               ),
             ),
           ),
