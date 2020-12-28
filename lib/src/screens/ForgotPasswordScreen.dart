@@ -56,29 +56,39 @@ class ForgotPasswordScreen extends StatelessWidget {
                       borderRadius: new BorderRadius.circular(8.0),
                     ),
                     width: 350,
-                    height: 260,
+                    height: 320,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(
-                          "Forgot Password",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black87,
-                          ),
-                        ),
-                        Text(
-                          "Let us know your phone number linked to this account",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black87,
-                          ),
-                        ),
-                        Text(
-                          "Phone Number",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black87,
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "FORGOT PASSWORD",
+                                style: TextStyle(
+                                  fontSize: 23,
+                                  color: Colors.black87,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 20),
+                              Text(
+                                "Let us know your phone number linked to this account",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: MyColors.textPrimary,
+                                ),
+                              ),
+                              SizedBox(height: 20),
+                              Text(
+                                "Phone Number",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black87,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         Padding(
@@ -108,7 +118,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(top: 20, bottom: 10),
+                          padding: EdgeInsets.only(bottom: 10),
                           child: SizedBox(
                             height: 50,
                             width: 310,
