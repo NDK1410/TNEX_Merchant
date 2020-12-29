@@ -46,7 +46,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                 ),
               ),
               width: double.infinity,
-              height: 320,
+              height: 360,
             ),
             Padding(
               padding: EdgeInsets.only(top: 80, left: 30),
