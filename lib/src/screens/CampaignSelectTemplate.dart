@@ -13,6 +13,21 @@ class CampaignSelectTemplate extends StatelessWidget {
             style: TextStyle(fontSize: 18),
           ),
         ),
+        leading: Container(
+          padding: EdgeInsets.only(top: 15, left: 15),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop(null);
+            },
+            child: Text(
+              "Back",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
         backgroundColor: MyColors.brand_dark,
       ),
       body: Container(
