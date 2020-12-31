@@ -12,9 +12,6 @@ class AfterEKycOverview extends StatelessWidget {
           height: double.infinity,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: new BorderRadius.only(
-              bottomRight: const Radius.circular(100.0),
-            ),
           ),
         ),
         Container(
@@ -29,6 +26,23 @@ class AfterEKycOverview extends StatelessWidget {
           ),
           width: double.infinity,
           height: 360,
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 80, left: 30),
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(color: Colors.grey[400], width: 1.0),
+                bottom: BorderSide(color: Colors.grey[400], width: 1.0),
+                right: BorderSide(color: Colors.grey[400], width: 1.0),
+                left: BorderSide(color: Colors.grey[400], width: 1.0),
+              ),
+              color: Colors.white,
+              borderRadius: new BorderRadius.circular(8.0),
+            ),
+            width: 350,
+            height: 400,
+          ),
         ),
       ],
     );
