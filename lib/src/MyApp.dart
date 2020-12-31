@@ -7,6 +7,7 @@ import 'package:tnexmerchant/src/screens/TakeIdCardPictureIntroScreen.dart';
 import 'package:tnexmerchant/src/screens/LoginScreen.dart';
 import 'package:tnexmerchant/src/screens/CampaignSelectTemplate.dart';
 import 'package:tnexmerchant/src/screens/ForgotPasswordScreen.dart';
+import 'package:tnexmerchant/src/screens/AfterEKycOverview.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
             break;
         }
       },
-      home: LoadingScreen(),
+      home: AfterEKycOverview(),
     );
   }
 }
