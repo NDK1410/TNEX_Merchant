@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 
 class BottomNavBar extends StatefulWidget {
   BottomNavBar({Key key}) : super(key: key);
