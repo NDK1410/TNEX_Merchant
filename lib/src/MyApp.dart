@@ -7,6 +7,7 @@ import 'package:tnexmerchant/src/screens/1_Onboarding/TakeIdCardPictureIntroScre
 import 'package:tnexmerchant/src/screens/1_Onboarding/LoginScreen.dart';
 import 'package:tnexmerchant/src/screens/3_Campaign/CampaignSelectTemplate.dart';
 import 'package:tnexmerchant/src/screens/1_Onboarding/ForgotPasswordScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/IdCardDocumentTypeScreen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -32,6 +33,9 @@ class MyApp extends StatelessWidget {
             break;
           case '/forgotPassword':
             return SlideRightRoute(widget: ForgotPasswordScreen());
+            break;
+          case '/idcardtype':
+            return SlideRightRoute(widget: IdCardDocumentTypeScreen());
             break;
         }
       },
