@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tnexmerchant/src/screens/LoadingScreen.dart';
-import 'package:tnexmerchant/src/screens/RegisterScreen.dart';
-import 'package:tnexmerchant/src/screens/IntroScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/LoadingScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/RegisterScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/IntroScreen.dart';
 import 'package:tnexmerchant/src/helpers/SlideRightRouter.dart';
-import 'package:tnexmerchant/src/screens/TakeIdCardPictureIntroScreen.dart';
-import 'package:tnexmerchant/src/screens/LoginScreen.dart';
-import 'package:tnexmerchant/src/screens/CampaignSelectTemplate.dart';
-import 'package:tnexmerchant/src/screens/ForgotPasswordScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/TakeIdCardPictureIntroScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/LoginScreen.dart';
+import 'package:tnexmerchant/src/screens/3_Campaign/CampaignSelectTemplate.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/ForgotPasswordScreen.dart';
 
 class MyApp extends StatelessWidget {
   @override

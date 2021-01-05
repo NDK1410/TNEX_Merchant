@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
-import 'package:tnexmerchant/src/screens/IntroScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/IntroScreen.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
