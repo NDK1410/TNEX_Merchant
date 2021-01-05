@@ -61,7 +61,9 @@ class RichDecisionScreen extends StatelessWidget {
                       Radius.circular(4),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/idcardtype');
+                  },
                   child: Text(
                     "Yes, I want to be a billionaire",
                     style: TextStyle(
