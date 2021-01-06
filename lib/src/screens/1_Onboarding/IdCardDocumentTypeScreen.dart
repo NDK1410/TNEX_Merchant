@@ -7,68 +7,38 @@ class IdCardDocumentTypeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // title: Center(
-        //   child: Padding(
-        //     padding: EdgeInsets.only(right: 50),
-        //     child: Text(
-        //       "Add Campaign",
-        //       style: TextStyle(fontSize: 18),
-        //     ),
-        //   ),
-        // ),
-        // leading: Container(
-        //   padding: EdgeInsets.only(top: 15, left: 15),
-        //   child: GestureDetector(
-        //     onTap: () {
-        //       Navigator.of(context).pop(null);
-        //     },
-        //     child: Text(
-        //       "Back",
-        //       style: TextStyle(
-        //           color: Colors.white,
-        //           fontSize: 18,
-        //           fontWeight: FontWeight.bold),
-        //     ),
-        //   ),
-        // ),
+        leadingWidth: 50,
+        automaticallyImplyLeading: true,
         backgroundColor: MyColors.brand_dark,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).pop(null);
-              },
-              child: Text(
-                "Back",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+        leading: Center(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: Text(
+              "Back",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
+          ),
+        ),
+        title: Container(
+          /// padding width = leading width to center title
+          padding: EdgeInsets.only(right: 50),
+          child: Center(
+            child: Text(
               "Document Type",
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
             ),
-
-            /// "Back" text with same color to invisible, to let appbar spacebetween ///
-            Text(
-              "Back",
-              style: TextStyle(
-                color: MyColors.brand_dark,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-
-            /// "Back" text with same color to invisible, to let appbar spacebetween ///
-          ],
+          ),
         ),
       ),
       body: Stack(
