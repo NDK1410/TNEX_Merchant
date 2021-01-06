@@ -7,24 +7,35 @@ class CampaignSelectTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text(
-            "Add Campaign",
-            style: TextStyle(fontSize: 18),
+        leadingWidth: 50,
+        automaticallyImplyLeading: true,
+        title: Container(
+          /// padding width = leading width to center title
+          padding: EdgeInsets.only(right: 50),
+          child: Center(
+            child: Text(
+              "Add Campaign",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ),
-        leading: Container(
-          padding: EdgeInsets.only(top: 15, left: 15),
+        leading: Center(
           child: GestureDetector(
             onTap: () {
-              Navigator.of(context).pop(null);
+              Navigator.of(context).pop();
             },
             child: Text(
               "Back",
               style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
