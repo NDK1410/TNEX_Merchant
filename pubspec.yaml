@@ -62,6 +62,18 @@ flutter:
     - assets/1-register/bg_transfer_full.png
     - assets/1-register/OpenBankAccountFailed.png
     - assets/1-register/CreateFreeBankAccount.png
+    - assets/1-register/cate_main21.png
+    - assets/1-register/cate_main31.png
+    - assets/1-register/cate_main61.png
+    - assets/1-register/cate_sub00.png
+    - assets/1-register/cate_sub20.png
+    - assets/1-register/cate_sub21.png
+    - assets/1-register/cate_sub22.png
+    - assets/1-register/cate_sub23.png
+    - assets/1-register/Travel.png
+    - assets/1-register/Education.png
+    - assets/1-register/Food.png
+    - assets/1-register/Healthy.png
     - assets/2-products/products-1-wide.png
     - assets/2-products/products-1.png
     - assets/3-campaign/merchant-3-rich.png
