@@ -9,6 +9,7 @@ import 'package:tnexmerchant/src/screens/3_Campaign/CampaignSelectTemplate.dart'
 import 'package:tnexmerchant/src/screens/1_Onboarding/ForgotPasswordScreen.dart';
 import 'package:tnexmerchant/src/screens/1_Onboarding/IdCardDocumentTypeScreen.dart';
 import 'package:tnexmerchant/src/screens/1_Onboarding/MoreOptionScreen.dart';
+import 'package:tnexmerchant/src/screens/4_Merchant_Website/SettingsAndSupportScreen.dart';
 
 class MyApp extends StatelessWidget {
   @override
