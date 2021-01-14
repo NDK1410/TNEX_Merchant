@@ -71,170 +71,23 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
             height: 350,
             child: Column(
               children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      SizedBox(height: 20),
-                      Text(
-                        "Current Password",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black87,
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Stack(
-                        alignment: AlignmentDirectional.centerEnd,
-                        children: <Widget>[
-                          TextField(
-                            controller: _currentPassController,
-                            obscureText: !_showCurrentPass,
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: MyColors.textPrimary,
-                            ),
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.blue),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.grey),
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: onToggleShowCurrentPass,
-                            child: Padding(
-                              padding: EdgeInsets.only(right: 10),
-                              child: Icon(
-                                Icons.remove_red_eye,
-                                color: _showCurrentPass
-                                    ? MyColors.brand_dark
-                                    : Colors.grey[400],
-                                size: 24.0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                FormWithTextField(
+                  text: "Current Password",
+                  fieldController: _currentPassController,
+                  obscure: _showCurrentPass,
+                  onToggle: onToggleShowCurrentPass,
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      SizedBox(height: 20),
-                      Text(
-                        "New password",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black87,
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Stack(
-                        alignment: AlignmentDirectional.centerEnd,
-                        children: <Widget>[
-                          TextField(
-                            controller: _newPassController,
-                            obscureText: !_showNewPass,
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: MyColors.textPrimary,
-                            ),
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.blue),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.grey),
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: onToggleShowNewPass,
-                            child: Padding(
-                              padding: EdgeInsets.only(right: 10),
-                              child: Icon(
-                                Icons.remove_red_eye,
-                                color: _showNewPass
-                                    ? MyColors.brand_dark
-                                    : Colors.grey[400],
-                                size: 24.0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                FormWithTextField(
+                  text: "New password",
+                  fieldController: _newPassController,
+                  obscure: _showNewPass,
+                  onToggle: onToggleShowNewPass,
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      SizedBox(height: 20),
-                      Text(
-                        "Confirm new password",
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black87,
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Stack(
-                        alignment: AlignmentDirectional.centerEnd,
-                        children: <Widget>[
-                          TextField(
-                            controller: _confirmPassController,
-                            obscureText: !_showConfirmPass,
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: MyColors.textPrimary,
-                            ),
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.blue),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(6.0)),
-                                borderSide: BorderSide(color: Colors.grey),
-                              ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: onToggleConfirmPass,
-                            child: Padding(
-                              padding: EdgeInsets.only(right: 10),
-                              child: Icon(
-                                Icons.remove_red_eye,
-                                color: _showConfirmPass
-                                    ? MyColors.brand_dark
-                                    : Colors.grey[400],
-                                size: 24.0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                FormWithTextField(
+                  text: "Confirm new password",
+                  fieldController: _confirmPassController,
+                  obscure: _showConfirmPass,
+                  onToggle: onToggleConfirmPass,
                 ),
               ],
             ),
@@ -260,5 +113,59 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
     setState(() {
       _showConfirmPass = !_showConfirmPass;
     });
+  }
+
+  Widget FormWithTextField({text, fieldController, obscure, onToggle}) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          SizedBox(height: 20),
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.black87,
+            ),
+          ),
+          SizedBox(height: 5),
+          Stack(
+            alignment: AlignmentDirectional.centerEnd,
+            children: <Widget>[
+              TextField(
+                controller: fieldController,
+                obscureText: !obscure,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: MyColors.textPrimary,
+                ),
+                decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(6.0)),
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(6.0)),
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: onToggle,
+                child: Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(
+                    Icons.remove_red_eye,
+                    color: obscure ? MyColors.brand_dark : Colors.grey[400],
+                    size: 24.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
