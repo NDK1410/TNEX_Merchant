@@ -7,6 +7,13 @@ class CHangePasswordScreen extends StatefulWidget {
 }
 
 class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
+  bool _showCurrentPass = false;
+  bool _showNewPass = false;
+  bool _showConfirmPass = false;
+  TextEditingController _currentPassController = new TextEditingController();
+  TextEditingController _newPassController = new TextEditingController();
+  TextEditingController _confirmPassController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,6 +89,8 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
                         alignment: AlignmentDirectional.centerEnd,
                         children: <Widget>[
                           TextField(
+                            controller: _currentPassController,
+                            obscureText: !_showCurrentPass,
                             style: TextStyle(
                               fontSize: 18,
                               color: MyColors.textPrimary,
@@ -100,14 +109,14 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
                             ),
                           ),
                           GestureDetector(
-                            // onTap: onToggleShowPass,
+                            onTap: onToggleShowCurrentPass,
                             child: Padding(
                               padding: EdgeInsets.only(right: 10),
                               child: Icon(
                                 Icons.remove_red_eye,
-                                // color: _showPass
-                                //     ? MyColors.brand_dark
-                                //     : Colors.grey[400],
+                                color: _showCurrentPass
+                                    ? MyColors.brand_dark
+                                    : Colors.grey[400],
                                 size: 24.0,
                               ),
                             ),
@@ -135,6 +144,8 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
                         alignment: AlignmentDirectional.centerEnd,
                         children: <Widget>[
                           TextField(
+                            controller: _newPassController,
+                            obscureText: !_showNewPass,
                             style: TextStyle(
                               fontSize: 18,
                               color: MyColors.textPrimary,
@@ -153,14 +164,14 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
                             ),
                           ),
                           GestureDetector(
-                            // onTap: onToggleShowPass,
+                            onTap: onToggleShowNewPass,
                             child: Padding(
                               padding: EdgeInsets.only(right: 10),
                               child: Icon(
                                 Icons.remove_red_eye,
-                                // color: _showPass
-                                //     ? MyColors.brand_dark
-                                //     : Colors.grey[400],
+                                color: _showNewPass
+                                    ? MyColors.brand_dark
+                                    : Colors.grey[400],
                                 size: 24.0,
                               ),
                             ),
@@ -188,6 +199,8 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
                         alignment: AlignmentDirectional.centerEnd,
                         children: <Widget>[
                           TextField(
+                            controller: _confirmPassController,
+                            obscureText: !_showConfirmPass,
                             style: TextStyle(
                               fontSize: 18,
                               color: MyColors.textPrimary,
@@ -206,14 +219,14 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
                             ),
                           ),
                           GestureDetector(
-                            // onTap: onToggleShowPass,
+                            onTap: onToggleConfirmPass,
                             child: Padding(
                               padding: EdgeInsets.only(right: 10),
                               child: Icon(
                                 Icons.remove_red_eye,
-                                // color: _showPass
-                                //     ? MyColors.brand_dark
-                                //     : Colors.grey[400],
+                                color: _showConfirmPass
+                                    ? MyColors.brand_dark
+                                    : Colors.grey[400],
                                 size: 24.0,
                               ),
                             ),
@@ -229,5 +242,23 @@ class _CHangePasswordScreenState extends State<CHangePasswordScreen> {
         ],
       ),
     );
+  }
+
+  void onToggleShowCurrentPass() {
+    setState(() {
+      _showCurrentPass = !_showCurrentPass;
+    });
+  }
+
+  void onToggleShowNewPass() {
+    setState(() {
+      _showNewPass = !_showNewPass;
+    });
+  }
+
+  void onToggleConfirmPass() {
+    setState(() {
+      _showConfirmPass = !_showConfirmPass;
+    });
   }
 }
