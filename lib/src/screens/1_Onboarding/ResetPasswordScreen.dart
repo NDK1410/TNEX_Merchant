@@ -77,11 +77,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     child: Column(
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.only(
-                            top: 20,
-                            bottom: 20,
-                            left: 20,
-                          ),
+                          padding: EdgeInsets.only(top: 20, left: 20),
                           child: Row(
                             children: <Widget>[
                               Text(
@@ -95,111 +91,17 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                             ],
                           ),
                         ),
-                        Row(
-                          children: <Widget>[
-                            SizedBox(width: 20),
-                            Text(
-                              "New Password",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black87,
-                              ),
-                            ),
-                          ],
+                        FormWithTextField(
+                          text: "New Password",
+                          fieldController: _passController,
+                          obscure: _showPass,
+                          onToggle: onToggleShowPass,
                         ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                          child: Stack(
-                            alignment: AlignmentDirectional.centerEnd,
-                            children: <Widget>[
-                              TextField(
-                                controller: _passController,
-                                obscureText: !_showPass,
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: MyColors.textPrimary,
-                                ),
-                                decoration: InputDecoration(
-                                  focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(6.0)),
-                                    borderSide: BorderSide(color: Colors.blue),
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(6.0)),
-                                    borderSide: BorderSide(color: Colors.grey),
-                                  ),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: onToggleShowPass,
-                                child: Padding(
-                                  padding: EdgeInsets.only(right: 10),
-                                  child: Icon(
-                                    Icons.remove_red_eye,
-                                    color: _showPass
-                                        ? MyColors.brand_dark
-                                        : Colors.grey[400],
-                                    size: 24.0,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Row(
-                          children: <Widget>[
-                            SizedBox(width: 20),
-                            Text(
-                              "Confirm New Password",
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black87,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                          child: Stack(
-                            alignment: AlignmentDirectional.centerEnd,
-                            children: <Widget>[
-                              TextField(
-                                controller: _passConfirmController,
-                                obscureText: !_showConfirmPass,
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: MyColors.textPrimary,
-                                ),
-                                decoration: InputDecoration(
-                                  focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(6.0)),
-                                    borderSide: BorderSide(color: Colors.blue),
-                                  ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(6.0)),
-                                    borderSide: BorderSide(color: Colors.grey),
-                                  ),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: onToggleShowConfirmPass,
-                                child: Padding(
-                                  padding: EdgeInsets.only(right: 10),
-                                  child: Icon(
-                                    Icons.remove_red_eye,
-                                    color: _showConfirmPass
-                                        ? MyColors.brand_dark
-                                        : Colors.grey[400],
-                                    size: 24.0,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                        FormWithTextField(
+                          text: "Confirm New Password",
+                          fieldController: _passConfirmController,
+                          obscure: _showConfirmPass,
+                          onToggle: onToggleShowConfirmPass,
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 20),
@@ -232,6 +134,60 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget FormWithTextField({text, fieldController, obscure, onToggle}) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          SizedBox(height: 20),
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.black87,
+            ),
+          ),
+          SizedBox(height: 5),
+          Stack(
+            alignment: AlignmentDirectional.centerEnd,
+            children: <Widget>[
+              TextField(
+                controller: fieldController,
+                obscureText: !obscure,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: MyColors.textPrimary,
+                ),
+                decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(6.0)),
+                    borderSide: BorderSide(color: Colors.blue),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(6.0)),
+                    borderSide: BorderSide(color: Colors.grey),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: onToggle,
+                child: Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(
+                    Icons.remove_red_eye,
+                    color: obscure ? MyColors.brand_dark : Colors.grey[400],
+                    size: 24.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
