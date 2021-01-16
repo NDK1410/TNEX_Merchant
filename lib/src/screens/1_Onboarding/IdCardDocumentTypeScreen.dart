@@ -84,135 +84,74 @@ class IdCardDocumentTypeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border(
-                      bottom: BorderSide(
-                        color: Colors.grey[200],
-                        width: 1.0,
-                      ),
-                    ),
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    children: <Widget>[
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'ID Card',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black87,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            'Series with 9 digits',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: MyColors.textPrimary,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Icon(
-                        Icons.keyboard_arrow_right,
-                        color: MyColors.textPrimary,
-                        size: 40,
-                      ),
-                    ],
-                  ),
+                CardContainer(
+                  title: 'ID Card',
+                  text: 'Series with 9 digits',
+                  icon: Icons.keyboard_arrow_right,
+                  colo: MyColors.textPrimary,
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border(
-                      bottom: BorderSide(
-                        color: Colors.grey[200],
-                        width: 1.0,
-                      ),
-                    ),
-                  ),
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    children: <Widget>[
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'Plastic-based ID card',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black87,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            'Series with 12 digits',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: MyColors.textPrimary,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Icon(
-                        Icons.keyboard_arrow_right,
-                        color: MyColors.textPrimary,
-                        size: 40,
-                      ),
-                    ],
-                  ),
+                CardContainer(
+                  title: 'Plastic-based ID card',
+                  text: 'Series with 12 digits',
+                  icon: Icons.keyboard_arrow_right,
+                  colo: MyColors.textPrimary,
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 80,
-                  color: Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    children: <Widget>[
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'Citizen card',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black87,
-                            ),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            'Series with 12 digits',
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: MyColors.textPrimary,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Icon(
-                        Icons.keyboard_arrow_right,
-                        color: MyColors.textPrimary,
-                        size: 40,
-                      ),
-                    ],
-                  ),
+                CardContainer(
+                  title: 'Citizen card',
+                  text: 'Series with 12 digits',
+                  icon: Icons.keyboard_arrow_right,
+                  colo: MyColors.textPrimary,
                 ),
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget CardContainer({title, text, icon, colo}) {
+    return Container(
+      width: double.infinity,
+      height: 80,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(
+          bottom: BorderSide(
+            color: Colors.grey[200],
+            width: 1.0,
+          ),
+        ),
+      ),
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        children: <Widget>[
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black87,
+                ),
+              ),
+              SizedBox(height: 5),
+              Text(
+                text,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: colo,
+                ),
+              ),
+            ],
+          ),
+          Spacer(),
+          Icon(
+            icon,
+            color: colo,
+            size: 40,
           ),
         ],
       ),
