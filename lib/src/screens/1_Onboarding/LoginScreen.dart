@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                          padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
                           child: TextField(
                             style: TextStyle(
                               fontSize: 18,
@@ -115,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                          padding: EdgeInsets.fromLTRB(20, 5, 20, 20),
                           child: Stack(
                             alignment: AlignmentDirectional.centerEnd,
                             children: <Widget>[
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(top: 20),
+                          padding: EdgeInsets.only(top: 10),
                           child: SizedBox(
                             height: 50,
                             width: 310,
