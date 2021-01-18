@@ -43,132 +43,136 @@ class _RegisterScreenState extends State<RegisterScreen> {
             Padding(
               padding: EdgeInsets.only(top: 60),
               child: Center(
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      height: 510,
-                      width: 320,
-                      decoration: BoxDecoration(
-                        border: Border(
-                          top: BorderSide(color: Colors.grey[400], width: 1.0),
-                          bottom:
-                              BorderSide(color: Colors.grey[400], width: 1.0),
-                          right:
-                              BorderSide(color: Colors.grey[400], width: 1.0),
-                          left: BorderSide(color: Colors.grey[400], width: 1.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        height: 510,
+                        width: 320,
+                        decoration: BoxDecoration(
+                          border: Border(
+                            top:
+                                BorderSide(color: Colors.grey[400], width: 1.0),
+                            bottom:
+                                BorderSide(color: Colors.grey[400], width: 1.0),
+                            right:
+                                BorderSide(color: Colors.grey[400], width: 1.0),
+                            left:
+                                BorderSide(color: Colors.grey[400], width: 1.0),
+                          ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.only(top: 20, left: 20),
-                            child: Text("Username",
-                                style: TextStyle(fontSize: 15)),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsets.only(top: 5, left: 20, right: 20),
-                            child: TextField(
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: MyColors.textPrimary,
-                              ),
-                              decoration: new InputDecoration(
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.blueAccent, width: 1.0),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.grey[400], width: 1.0),
-                                ),
-                              ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(top: 20, left: 20),
+                              child: Text("Username",
+                                  style: TextStyle(fontSize: 15)),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 20, left: 20),
-                            child:
-                                Text("Phone", style: TextStyle(fontSize: 15)),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsets.only(top: 5, left: 20, right: 20),
-                            child: TextField(
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: MyColors.textPrimary,
-                              ),
-                              decoration: new InputDecoration(
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.blueAccent, width: 1.0),
+                            Padding(
+                              padding:
+                                  EdgeInsets.only(top: 5, left: 20, right: 20),
+                              child: TextField(
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: MyColors.textPrimary,
                                 ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.grey[400], width: 1.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                          FormWithTextField(
-                            text: "Password",
-                            fieldController: _passController,
-                            obscure: _showPass,
-                            onToggle: onToggleShowPass,
-                          ),
-                          FormWithTextField(
-                            text: "Confirm Password",
-                            fieldController: _passConfirmController,
-                            obscure: _showConfirmPass,
-                            onToggle: onToggleShowConfirmPass,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(top: 20, left: 10),
-                            child: SizedBox(
-                              height: 50,
-                              width: 300,
-                              child: RaisedButton(
-                                color: MyColors.brand,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(4),
+                                decoration: new InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.blueAccent, width: 1.0),
                                   ),
-                                ),
-                                onPressed: () {
-                                  // Navigator.pushNamed(context, '/register');
-                                },
-                                child: Text(
-                                  "Create an account",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.grey[400], width: 1.0),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: EdgeInsets.only(top: 20, left: 20),
+                              child:
+                                  Text("Phone", style: TextStyle(fontSize: 15)),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsets.only(top: 5, left: 20, right: 20),
+                              child: TextField(
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: MyColors.textPrimary,
+                                ),
+                                decoration: new InputDecoration(
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.blueAccent, width: 1.0),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.grey[400], width: 1.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            FormWithTextField(
+                              text: "Password",
+                              fieldController: _passController,
+                              obscure: _showPass,
+                              onToggle: onToggleShowPass,
+                            ),
+                            FormWithTextField(
+                              text: "Confirm Password",
+                              fieldController: _passConfirmController,
+                              obscure: _showConfirmPass,
+                              onToggle: onToggleShowConfirmPass,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 20, left: 10),
+                              child: SizedBox(
+                                height: 50,
+                                width: 300,
+                                child: RaisedButton(
+                                  color: MyColors.brand,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(4),
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    // Navigator.pushNamed(context, '/register');
+                                  },
+                                  child: Text(
+                                    "Create an account",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 20),
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, "/login");
-                        },
-                        child: Text(
-                          "I already have an account",
-                          style: TextStyle(
-                            color: MyColors.brand,
-                            fontSize: 18,
+                      Padding(
+                        padding: EdgeInsets.only(top: 20),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/login");
+                          },
+                          child: Text(
+                            "I already have an account",
+                            style: TextStyle(
+                              color: MyColors.brand,
+                              fontSize: 18,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
