@@ -68,15 +68,10 @@ class CampaignSelectTemplate extends StatelessWidget {
                       color: Colors.grey[400],
                     ),
                   ),
-                  child: Column(
-                    children: <Widget>[
-                      Image(
-                        image: AssetImage(
-                            "assets/3-campaign/merchant-3-flashsale.png"),
-                      ),
-                      Text("Flash"),
-                      Text("Sale"),
-                    ],
+                  child: _upperRow(
+                    imageurl: "assets/3-campaign/merchant-3-flashsale.png",
+                    upperText: "Flash",
+                    lowerText: "Sale",
                   ),
                 ),
                 Padding(
@@ -112,16 +107,10 @@ class CampaignSelectTemplate extends StatelessWidget {
                       color: Colors.grey[400],
                     ),
                   ),
-                  child: Column(
-                    children: <Widget>[
-                      Image(
-                        height: 90,
-                        image: AssetImage(
-                            "assets/3-campaign/merchant-3-iconlove.png"),
-                      ),
-                      Text("Event"),
-                      Text("Day")
-                    ],
+                  child: _upperRow(
+                    imageurl: "assets/3-campaign/merchant-3-iconlove.png",
+                    upperText: "Event",
+                    lowerText: "Day",
                   ),
                 ),
               ],
@@ -139,63 +128,59 @@ class CampaignSelectTemplate extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                FDottedLine(
-                  color: Colors.grey[400],
-                  strokeWidth: 2.0,
-                  dottedLength: 10.0,
-                  space: 2.0,
-                  corner: FDottedLineCorner.all(8),
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        width: 100,
-                        height: 110,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                "assets/3-campaign/merchant-3-discountevent.png"),
-                          ),
-                        ),
-                      ),
-                      Text("Discount"),
-                      Text("Event"),
-                      SizedBox(height: 10),
-                    ],
-                  ),
+                _lowerRow(
+                  imageurl: "assets/3-campaign/merchant-3-discountevent.png",
+                  upperText: "Discount",
+                  lowerText: "Event",
                 ),
                 SizedBox(width: 30),
-                FDottedLine(
-                  color: Colors.grey[400],
-                  strokeWidth: 2.0,
-                  dottedLength: 12.0,
-                  space: 4.0,
-                  corner: FDottedLineCorner.all(8),
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        width: 100,
-                        height: 110,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                "assets/3-campaign/merchant-3-discountcode.png"),
-                          ),
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(
-                            color: Colors.grey[300],
-                          ),
-                        ),
-                      ),
-                      Text("Discount"),
-                      Text("Code"),
-                      SizedBox(height: 10),
-                    ],
-                  ),
+                _lowerRow(
+                  imageurl: "assets/3-campaign/merchant-3-discountcode.png",
+                  upperText: "Discount",
+                  lowerText: "Code",
                 ),
               ],
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _upperRow({imageurl, upperText, lowerText}) {
+    return Column(
+      children: <Widget>[
+        Image(
+          image: AssetImage(imageurl),
+        ),
+        Text(upperText),
+        Text(lowerText),
+      ],
+    );
+  }
+
+  Widget _lowerRow({imageurl, upperText, lowerText}) {
+    return FDottedLine(
+      color: Colors.grey[400],
+      strokeWidth: 2.0,
+      dottedLength: 10.0,
+      space: 2.0,
+      corner: FDottedLineCorner.all(8),
+      child: Column(
+        children: <Widget>[
+          Container(
+            width: 100,
+            height: 110,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(imageurl),
+              ),
+            ),
+          ),
+          Text(upperText),
+          Text(lowerText),
+          SizedBox(height: 10),
+        ],
       ),
     );
   }
