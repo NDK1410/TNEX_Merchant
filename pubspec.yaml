@@ -72,6 +72,12 @@ flutter:
     - assets/3-campaign/merchant-3-promocode.png
     - assets/3-campaign/merchant-3-flashsale.png
     - assets/1-register/camera.png
+    - assets/2-products/Food/breakfast.png
+    - assets/2-products/Food/Cakes.png
+    - assets/2-products/Food/Juice.png
+    - assets/2-products/Food/Drinks.png
+    - assets/2-products/Food/Lunch.png
+    - assets/2-products/Food/Tasty.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
