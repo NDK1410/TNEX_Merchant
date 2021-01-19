@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
+import 'package:tnexmerchant/src/helpers/WidgetCategoryBox.dart';
 
 class ChooseFoodCategoryScreen extends StatelessWidget {
   @override
@@ -48,17 +49,17 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Food/breakfast.png",
                       textContent: "Breakfast",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Food/Juice.png",
                       textContent: "Juice",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Food/Cakes.png",
                       textContent: "Cakes",
                     ),
@@ -68,17 +69,17 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Food/Lunch.png",
                       textContent: "Lunch\nMeal",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Food/Tasty.png",
                       textContent: "Tasty",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Food/Drinks.png",
                       textContent: "Drinks",
                     ),
@@ -88,40 +89,6 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _CategoryBox({imageUrl, textContent}) {
-    return Container(
-      height: 120,
-      width: 84,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: 10),
-            Image(
-              height: 60,
-              width: 60,
-              image: AssetImage(imageUrl),
-            ),
-            SizedBox(height: 8),
-            Container(
-              width: 61,
-              child: Text(
-                textContent,
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(
-          color: Colors.grey[300],
-        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
+import 'package:tnexmerchant/src/helpers/WidgetCategoryBox.dart';
 
 class ChooseFashionCategoryScreen extends StatelessWidget {
   @override
@@ -48,17 +49,17 @@ class ChooseFashionCategoryScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Fashion/gile.png",
                       textContent: "Women\nshirt",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Fashion/shirt.png",
                       textContent: "Men\nShirt",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Fashion/hat.png",
                       textContent: "Bags",
                     ),
@@ -68,17 +69,17 @@ class ChooseFashionCategoryScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Fashion/bag.png",
                       textContent: "Travel\nheadwear",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Fashion/polo.png",
                       textContent: "Unisex\nTshirt",
                     ),
                     SizedBox(width: 20),
-                    _CategoryBox(
+                    CategoryBox(
                       imageUrl: "assets/2-products/Fashion/trouses.png",
                       textContent: "Trouses",
                     ),
@@ -88,41 +89,6 @@ class ChooseFashionCategoryScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _CategoryBox({imageUrl, textContent}) {
-    return Container(
-      height: 120,
-      width: 84,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(height: 10),
-            Image(
-              height: 60,
-              width: 60,
-              image: AssetImage(imageUrl),
-            ),
-            SizedBox(height: 8),
-            Container(
-              width: 61,
-              child: Text(
-                textContent,
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(
-          color: Colors.grey[300],
-        ),
       ),
     );
   }
