@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
 
-class ChooseFoodCategoryScreen extends StatelessWidget {
+class ChooseFashionCategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,18 +49,18 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     _CategoryBox(
-                      imageUrl: "assets/2-products/Food/breakfast.png",
-                      textContent: "Breakfast",
+                      imageUrl: "assets/2-products/Fashion/gile.png",
+                      textContent: "Women\nshirt",
                     ),
                     SizedBox(width: 20),
                     _CategoryBox(
-                      imageUrl: "assets/2-products/Food/Juice.png",
-                      textContent: "Juice",
+                      imageUrl: "assets/2-products/Fashion/shirt.png",
+                      textContent: "Men\nShirt",
                     ),
                     SizedBox(width: 20),
                     _CategoryBox(
-                      imageUrl: "assets/2-products/Food/Cakes.png",
-                      textContent: "Cakes",
+                      imageUrl: "assets/2-products/Fashion/hat.png",
+                      textContent: "Bags",
                     ),
                   ],
                 ),
@@ -69,18 +69,18 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     _CategoryBox(
-                      imageUrl: "assets/2-products/Food/Lunch.png",
-                      textContent: "Lunch\nMeal",
+                      imageUrl: "assets/2-products/Fashion/bag.png",
+                      textContent: "Travel\nheadwear",
                     ),
                     SizedBox(width: 20),
                     _CategoryBox(
-                      imageUrl: "assets/2-products/Food/Tasty.png",
-                      textContent: "Tasty",
+                      imageUrl: "assets/2-products/Fashion/polo.png",
+                      textContent: "Unisex\nTshirt",
                     ),
                     SizedBox(width: 20),
                     _CategoryBox(
-                      imageUrl: "assets/2-products/Food/Drinks.png",
-                      textContent: "Drinks",
+                      imageUrl: "assets/2-products/Fashion/trouses.png",
+                      textContent: "Trouses",
                     ),
                   ],
                 ),
@@ -99,6 +99,7 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(height: 10),
             Image(
