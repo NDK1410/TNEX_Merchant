@@ -78,6 +78,12 @@ flutter:
     - assets/2-products/Food/Drinks.png
     - assets/2-products/Food/Lunch.png
     - assets/2-products/Food/Tasty.png
+    - assets/2-products/Fashion/gile.png
+    - assets/2-products/Fashion/shirt.png
+    - assets/2-products/Fashion/bag.png
+    - assets/2-products/Fashion/hat.png
+    - assets/2-products/Fashion/polo.png
+    - assets/2-products/Fashion/trouses.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
