@@ -38,18 +38,18 @@ class _IntroScreenState extends State<IntroScreen> {
             controller: _pageController,
             children: <Widget>[
               makePage(
-                image: 'assets/1-register/introslide_1.png',
+                image: 'assets/1-register/introslide.png',
                 title: MyString.step1,
                 content: MyString.step4,
               ),
               makePage(
                 // reverse: true,
-                image: 'assets/1-register/step-one.png',
+                image: 'assets/1-register/introslide.png',
                 title: MyString.step2,
                 content: MyString.step4,
               ),
               makePage(
-                image: 'assets/1-register/step-two.png',
+                image: 'assets/1-register/introslide.png',
                 title: MyString.step3,
                 content: MyString.step4,
               ),
@@ -68,7 +68,7 @@ class _IntroScreenState extends State<IntroScreen> {
               height: 50,
               width: 340,
               child: RaisedButton(
-                color: MyColors.brand_dark,
+                color: MyColors.primary,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
                     Radius.circular(4),
@@ -96,7 +96,7 @@ class _IntroScreenState extends State<IntroScreen> {
               child: Text(
                 "I already have an account",
                 style: TextStyle(
-                  color: MyColors.brand_dark,
+                  color: MyColors.primary,
                   fontSize: 20,
                 ),
               ),
@@ -154,8 +154,8 @@ class _IntroScreenState extends State<IntroScreen> {
             title,
             style: TextStyle(
                 color: Colors.grey[600],
-                fontSize: 20,
-                fontWeight: FontWeight.bold),
+                fontSize: 14,
+                fontWeight: FontWeight.w500),
           ),
           SizedBox(height: 10),
           Text(
@@ -163,8 +163,8 @@ class _IntroScreenState extends State<IntroScreen> {
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Colors.grey[600],
-                fontSize: 20,
-                fontWeight: FontWeight.w400),
+                fontSize: 14,
+                fontWeight: FontWeight.w500),
           ),
           reverse
               ? Column(
@@ -189,7 +189,7 @@ class _IntroScreenState extends State<IntroScreen> {
       width: isActive ? 30 : 6,
       margin: EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
-          color: Colors.black, borderRadius: BorderRadius.circular(5)),
+          color: MyColors.primary, borderRadius: BorderRadius.circular(5)),
     );
   }
 
