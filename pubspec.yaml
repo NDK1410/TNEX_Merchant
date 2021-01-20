@@ -57,6 +57,7 @@ flutter:
     - assets/1-register/step-two.png
     - assets/1-register/introslide_1.png
     - assets/1-register/introslide.png
+    - assets/1-register/bg.png
     - assets/1-register/step-three.png
     - assets/1-register/Loading.png
     - assets/1-register/splash_bg_decor.png
