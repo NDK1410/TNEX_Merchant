@@ -24,7 +24,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   bottomRight: const Radius.circular(120.0),
                 ),
                 image: DecorationImage(
-                  image: AssetImage("assets/1-register/bg_transfer_full.png"),
+                  image: AssetImage("assets/1-register/bg.png"),
                   fit: BoxFit.fill,
                 ),
               ),
