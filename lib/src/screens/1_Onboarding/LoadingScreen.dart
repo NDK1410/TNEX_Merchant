@@ -20,12 +20,26 @@ class _LoadingScreenState extends State<LoadingScreen> {
       future: _access(),
       builder: (context, snapshot) {
         return Container(
-          color: MyColors.loadingScreenBackground,
+          color: Colors.white,
           child: Center(
-            child: Image.asset(
-              "assets/1-register/Loading.png",
-              fit: BoxFit.cover,
-              width: 350,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  "assets/1-register/Loading.png",
+                  fit: BoxFit.cover,
+                  width: 120,
+                ),
+                SizedBox(height: 20),
+                Text(
+                  "TNEX Merchant",
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: MyColors.primary,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
           ),
         );

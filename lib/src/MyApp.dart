@@ -9,8 +9,6 @@ import 'package:tnexmerchant/src/screens/3_Campaign/CampaignSelectTemplate.dart'
 import 'package:tnexmerchant/src/screens/1_Onboarding/ForgotPasswordScreen.dart';
 import 'package:tnexmerchant/src/screens/1_Onboarding/IdCardDocumentTypeScreen.dart';
 
-import 'package:tnexmerchant/src/screens/2_Product/FoodScreenChooseSubCategory.dart';
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -41,7 +39,7 @@ class MyApp extends StatelessWidget {
             break;
         }
       },
-      home: FoodScreenChooseSubCategory(),
+      home: LoadingScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
