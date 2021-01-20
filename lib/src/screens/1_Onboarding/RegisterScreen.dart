@@ -41,11 +41,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
               height: 360,
             ),
             Padding(
-              padding: EdgeInsets.only(top: 60),
+              padding: EdgeInsets.only(top: 20),
               child: Center(
                 child: SingleChildScrollView(
                   child: Column(
                     children: <Widget>[
+                      Text(
+                        "Register",
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(height: 10),
                       Container(
                         height: 510,
                         width: 320,
@@ -134,7 +143,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 height: 50,
                                 width: 300,
                                 child: RaisedButton(
-                                  color: MyColors.brand,
+                                  color: MyColors.primary,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                       Radius.circular(4),
@@ -165,7 +174,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           child: Text(
                             "I already have an account",
                             style: TextStyle(
-                              color: MyColors.brand,
+                              color: MyColors.primary,
                               fontSize: 18,
                             ),
                           ),
@@ -192,7 +201,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           Text(
             text,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 15,
               color: Colors.black87,
             ),
           ),
@@ -204,7 +213,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 controller: fieldController,
                 obscureText: !obscure,
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
                   color: MyColors.textPrimary,
                 ),
                 decoration: InputDecoration(
