@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
 import 'package:tnexmerchant/src/helpers/ListSubCategoryWidget.dart';
 
-class FoodScreenChooseSubCategory extends StatelessWidget {
+class FashionScreenChooseSubCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,16 +21,25 @@ class FoodScreenChooseSubCategory extends StatelessWidget {
           Container(
             width: double.infinity,
             color: Colors.white,
+            height: 550,
             child: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
-                  ListSubCategory("Noodles"),
+                  ListSubCategory("Button-down shirt"),
                   Divider(),
-                  ListSubCategory("Breads"),
+                  ListSubCategory("Bloomers"),
                   Divider(),
-                  ListSubCategory("Rice set"),
+                  ListSubCategory("Jeans"),
                   Divider(),
-                  ListSubCategory("Buffet"),
+                  ListSubCategory("Shorts"),
+                  Divider(),
+                  ListSubCategory("Anime Cotton Tshirt"),
+                  Divider(),
+                  ListSubCategory("Jacket"),
+                  Divider(),
+                  ListSubCategory("Sleepwear"),
+                  Divider(),
+                  ListSubCategory("Underwear"),
                 ],
               ),
             ),
