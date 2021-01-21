@@ -9,4 +9,5 @@ class MyColors {
   static Color blueGreyStroke = Color.fromRGBO(23, 21, 137, 0.5);
   static Color blueGreyFill = Color.fromRGBO(23, 21, 137, 0.2);
   static Color loginTextFieldBorderFocuse = Color.fromRGBO(61, 72, 180, 1);
+  static Color deepRed = Color.fromRGBO(206, 26, 26, 1);
 }
