@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyString.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
+import 'package:tnexmerchant/src/helpers/CustomClipPath.dart';
 
 class IntroScreen extends StatefulWidget {
   @override
@@ -27,78 +28,99 @@ class _IntroScreenState extends State<IntroScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        alignment: Alignment.bottomCenter,
         children: <Widget>[
-          PageView(
-            onPageChanged: (int page) {
-              setState(() {
-                currentIndex = page;
-              });
-            },
-            controller: _pageController,
-            children: <Widget>[
-              makePage(
-                image: 'assets/1-register/introslide.png',
-                title: MyString.step1,
-                content: MyString.step4,
+          Container(
+            height: double.infinity,
+            width: double.infinity,
+            color: Colors.grey[100],
+          ),
+          ClipPath(
+            clipper: CustomClipPath(),
+            child: Container(
+              padding: EdgeInsets.only(top: 85),
+              width: MediaQuery.of(context).size.width,
+              color: Colors.white,
+              height: 540,
+              child: PageView(
+                onPageChanged: (int page) {
+                  setState(() {
+                    currentIndex = page;
+                  });
+                },
+                controller: _pageController,
+                children: <Widget>[
+                  makePage(
+                    image: 'assets/1-register/introslide.png',
+                    title: MyString.step1,
+                    content: MyString.step4,
+                  ),
+                  makePage(
+                    // reverse: true,
+                    image: 'assets/1-register/introslide.png',
+                    title: MyString.step2,
+                    content: MyString.step4,
+                  ),
+                  makePage(
+                    image: 'assets/1-register/introslide.png',
+                    title: MyString.step3,
+                    content: MyString.step4,
+                  ),
+                ],
               ),
-              makePage(
-                // reverse: true,
-                image: 'assets/1-register/introslide.png',
-                title: MyString.step2,
-                content: MyString.step4,
-              ),
-              makePage(
-                image: 'assets/1-register/introslide.png',
-                title: MyString.step3,
-                content: MyString.step4,
-              ),
-            ],
+            ),
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 145),
+            padding: EdgeInsets.only(top: 440),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: _buildIndicator(),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 70),
-            child: SizedBox(
-              height: 50,
-              width: 340,
-              child: RaisedButton(
-                color: MyColors.primary,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(4),
+          Container(
+            padding: EdgeInsets.only(top: 540),
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(bottom: 20),
+                    child: SizedBox(
+                      height: 40,
+                      width: 280,
+                      child: RaisedButton(
+                        color: MyColors.primary,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(4),
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/register');
+                        },
+                        child: Text(
+                          "I want to create an account",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/register');
-                },
-                child: Text(
-                  "I want to create an account",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
+                  Container(
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/login");
+                      },
+                      child: Text(
+                        "I already have an account",
+                        style: TextStyle(
+                          color: MyColors.primary,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 30),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, "/login");
-              },
-              child: Text(
-                "I already have an account",
-                style: TextStyle(
-                  color: MyColors.primary,
-                  fontSize: 20,
-                ),
+                ],
               ),
             ),
           ),
@@ -110,6 +132,8 @@ class _IntroScreenState extends State<IntroScreen> {
   Widget makePage({image, title, content, reverse = false}) {
     return Container(
       padding: EdgeInsets.only(bottom: 125),
+      // height: 420,
+      color: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -120,7 +144,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       "Welcome to",
                       style: TextStyle(
                         color: MyColors.brand_dark,
-                        fontSize: 25,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -128,7 +152,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       "TNEX Merchant",
                       style: TextStyle(
                         color: MyColors.brand_dark,
-                        fontSize: 25,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -136,8 +160,8 @@ class _IntroScreenState extends State<IntroScreen> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Container(
-                        width: double.infinity,
-                        height: 300,
+                        height: 180,
+                        width: 226,
                         child: Image.asset(
                           image,
                           fit: BoxFit.fill,

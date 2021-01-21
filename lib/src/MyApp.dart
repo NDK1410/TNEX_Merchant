@@ -10,8 +10,6 @@ import 'package:tnexmerchant/src/screens/1_Onboarding/ForgotPasswordScreen.dart'
 import 'package:tnexmerchant/src/screens/1_Onboarding/IdCardDocumentTypeScreen.dart';
 import 'package:tnexmerchant/src/screens/1_Onboarding/OTPRegisterErrorScreen.dart';
 
-import 'package:tnexmerchant/src/screens/1_Onboarding/Test.dart';
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -42,7 +40,7 @@ class MyApp extends StatelessWidget {
             break;
         }
       },
-      home: OTPRegisterErrorScreen(),
+      home: LoadingScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
