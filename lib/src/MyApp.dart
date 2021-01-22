@@ -9,7 +9,7 @@ import 'package:tnexmerchant/src/screens/3_Campaign/CampaignSelectTemplate.dart'
 import 'package:tnexmerchant/src/screens/1_Onboarding/ForgotPasswordScreen.dart';
 import 'package:tnexmerchant/src/screens/1_Onboarding/IdCardDocumentTypeScreen.dart';
 
-import 'package:tnexmerchant/src/screens/1_Onboarding/CreateFreeBankAccountScreen.dart';
+import 'package:tnexmerchant/src/screens/1_Onboarding/OpenBankFailedAdminScreen.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             break;
         }
       },
-      home: CreateFreeBankAccountScreen(),
+      home: OpenBankFailedAdminScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
