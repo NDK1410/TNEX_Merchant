@@ -25,7 +25,7 @@ class CreateFreeBankAccountScreen extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.only(top: 60, bottom: 20),
+                          padding: EdgeInsets.only(top: 50, bottom: 20),
                           child: Text(
                             "Create free bank account",
                             style: TextStyle(
@@ -43,69 +43,9 @@ class CreateFreeBankAccountScreen extends StatelessWidget {
                             fit: BoxFit.fill,
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.check,
-                                color: MyColors.success,
-                                size: 14,
-                              ),
-                              SizedBox(width: 5),
-                              Text(
-                                "Transactions with zero fees",
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.check,
-                                color: MyColors.success,
-                                size: 14,
-                              ),
-                              SizedBox(width: 5),
-                              Text(
-                                "Online payment from TNEX consumers",
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.check,
-                                color: MyColors.success,
-                                size: 14,
-                              ),
-                              SizedBox(width: 5),
-                              Text(
-                                "Get higher merchant rank",
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                        contentInfoRow("Transactions with zero fees"),
+                        contentInfoRow("Online payment from TNEX consumers"),
+                        contentInfoRow("Get higher merchant rank"),
                       ],
                     ),
                   ),
@@ -138,6 +78,30 @@ class CreateFreeBankAccountScreen extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget contentInfoRow(text) {
+    return Padding(
+      padding: EdgeInsets.only(top: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Icon(
+            Icons.check,
+            color: MyColors.success,
+            size: 14,
+          ),
+          SizedBox(width: 5),
+          Text(
+            text,
+            style: TextStyle(
+              color: Colors.black87,
+              fontSize: 14,
             ),
           ),
         ],
