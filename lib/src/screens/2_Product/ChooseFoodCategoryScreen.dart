@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
-import 'package:tnexmerchant/src/helpers/WidgetCategoryBox.dart';
+import 'package:tnexmerchant/src/helpers/TemplateCategoryBox.dart';
 
 class ChooseFoodCategoryScreen extends StatelessWidget {
   @override
@@ -46,17 +46,17 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    CategoryBox(
+                    TemplateCategoryBox(
                       imageUrl: "assets/2-products/Food/breakfast.png",
                       textContent: "Breakfast",
                     ),
                     SizedBox(width: 20),
-                    CategoryBox(
+                    TemplateCategoryBox(
                       imageUrl: "assets/2-products/Food/Juice.png",
                       textContent: "Juice",
                     ),
                     SizedBox(width: 20),
-                    CategoryBox(
+                    TemplateCategoryBox(
                       imageUrl: "assets/2-products/Food/Cakes.png",
                       textContent: "Cakes",
                     ),
@@ -66,17 +66,17 @@ class ChooseFoodCategoryScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    CategoryBox(
+                    TemplateCategoryBox(
                       imageUrl: "assets/2-products/Food/Lunch.png",
                       textContent: "Lunch\nMeal",
                     ),
                     SizedBox(width: 20),
-                    CategoryBox(
+                    TemplateCategoryBox(
                       imageUrl: "assets/2-products/Food/Tasty.png",
                       textContent: "Tasty",
                     ),
                     SizedBox(width: 20),
-                    CategoryBox(
+                    TemplateCategoryBox(
                       imageUrl: "assets/2-products/Food/Drinks.png",
                       textContent: "Drinks",
                     ),
