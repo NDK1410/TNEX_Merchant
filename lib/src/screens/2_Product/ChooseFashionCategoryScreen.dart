@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tnexmerchant/src/helpers/MyColors.dart';
-import 'package:tnexmerchant/src/helpers/WidgetCategoryBox.dart';
+import 'package:tnexmerchant/src/helpers/TemplateCategoryBox.dart';
+import 'package:tnexmerchant/src/helpers/CustomClipPath.dart';
 
 class ChooseFashionCategoryScreen extends StatelessWidget {
   @override
@@ -8,7 +9,10 @@ class ChooseFashionCategoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Choose Category"),
+        title: Text(
+          "Choose Category",
+          style: TextStyle(fontSize: 16),
+        ),
         backgroundColor: MyColors.brand_dark,
       ),
       body: Stack(
@@ -16,73 +20,71 @@ class ChooseFashionCategoryScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             height: double.infinity,
-            color: Colors.grey[200],
+            color: Colors.grey[100],
           ),
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
+          ClipPath(
+            clipper: CustomClipPath(),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
               color: Colors.white,
-              // borderRadius: new BorderRadius.only(
-              //   bottomRight: const Radius.circular(80.0),
-              //   bottomLeft: const Radius.circular(80.0),
-              // ),
-            ),
-            height: 400,
-            child: Column(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 25),
-                  child: Center(
-                    child: Text(
-                      "What will you sell?",
-                      style: TextStyle(
-                        color: MyColors.brand_dark,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
+              height: 550,
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 24),
+                    child: Center(
+                      child: Text(
+                        "What will you sell?",
+                        style: TextStyle(
+                          color: MyColors.brand_dark,
+                          fontSize: 24,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CategoryBox(
-                      imageUrl: "assets/2-products/Fashion/gile.png",
-                      textContent: "Women\nshirt",
-                    ),
-                    SizedBox(width: 20),
-                    CategoryBox(
-                      imageUrl: "assets/2-products/Fashion/shirt.png",
-                      textContent: "Men\nShirt",
-                    ),
-                    SizedBox(width: 20),
-                    CategoryBox(
-                      imageUrl: "assets/2-products/Fashion/hat.png",
-                      textContent: "Bags",
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    CategoryBox(
-                      imageUrl: "assets/2-products/Fashion/bag.png",
-                      textContent: "Travel\nheadwear",
-                    ),
-                    SizedBox(width: 20),
-                    CategoryBox(
-                      imageUrl: "assets/2-products/Fashion/polo.png",
-                      textContent: "Unisex\nTshirt",
-                    ),
-                    SizedBox(width: 20),
-                    CategoryBox(
-                      imageUrl: "assets/2-products/Fashion/trouses.png",
-                      textContent: "Trouses",
-                    ),
-                  ],
-                ),
-              ],
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          TemplateCategoryBox(
+                            imageurl:
+                                "assets/2-products/Fashion/Male_Fashion.png",
+                            textContent: "Male Fashion",
+                          ),
+                          SizedBox(height: 24),
+                          TemplateCategoryBox(
+                            imageurl: "assets/2-products/Fashion/Footwear.png",
+                            textContent: "Footwear",
+                          ),
+                          SizedBox(height: 24),
+                          TemplateCategoryBox(
+                            imageurl:
+                                "assets/2-products/Fashion/Kid_Fashion.png",
+                            textContent: "Kid Fashion",
+                          ),
+                        ],
+                      ),
+                      SizedBox(width: 23),
+                      Column(
+                        children: <Widget>[
+                          TemplateCategoryBox(
+                            imageurl:
+                                "assets/2-products/Fashion/Female_Fashion.png",
+                            textContent: "Female Fashion",
+                          ),
+                          SizedBox(height: 24),
+                          TemplateCategoryBox(
+                            imageurl: "assets/2-products/Fashion/Accessory.png",
+                            textContent: "Accessory",
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
